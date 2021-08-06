@@ -4,6 +4,8 @@ int main()
 {
     std::cout << "You are breaking into J&A to steal Jun's HDD...";
     std::cout << std::endl;
+    std::cout << "It seems to locked behind the walls of J&A...";
+    std::cout << std::endl;
     std::cout << "You need to enter the correct codes to get into the building undetected...";
     std::cout << std::endl;
 
