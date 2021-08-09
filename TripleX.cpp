@@ -21,8 +21,19 @@ int main()
     std::cout << "--> The terminal requires you to input 3 codes in total" << std::endl;
     std::cout << "--> The numbers add up to " << CodeSum << std::endl;
     std::cout << "--> And gives a product of " << CodeProduct << std::endl;
+    std::cout << std::endl;
+    std::cout << "Enter the 3-number code below:" << std::endl;
 
-    int PlayerGuess;
+    int GuessA, GuessB, GuessC;
+    
+    std::cin >> GuessA;
+    std::cin >> GuessB;
+    std::cin >> GuessC;
+    std::cout << std::endl;
+    std::cout << "You have entered: " << GuessA << GuessB << GuessC << std::endl;
+
+    int GuessSum = GuessA + GuessB + GuessC;
+    int GuessProduct = GuessA * GuessB * GuessC;
 
     return 0;
 }
