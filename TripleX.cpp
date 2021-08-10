@@ -10,9 +10,9 @@ int main()
     std::cout << "You need to enter the correct codes to get into the building undetected..." << std::endl;
     std::cout << std::endl;
 
-    const int CodeA = 5;
+    const int CodeA = 3;
     const int CodeB = 2;
-    const int CodeC = 3;
+    const int CodeC = 5;
 
     const int CodeSum = CodeA + CodeB + CodeC;
     const int CodeProduct = CodeA * CodeB * CodeC;
@@ -20,7 +20,7 @@ int main()
     // Print sum and product to terminal
     std::cout << "--> The terminal requires you to input 3 codes in total" << std::endl;
     std::cout << "--> The numbers add up to " << CodeSum << std::endl;
-    std::cout << "--> And gives a product of " << CodeProduct << std::endl;
+    std::cout << "--> And when multiplied, gives a product of " << CodeProduct << std::endl;
     std::cout << std::endl;
     std::cout << "Enter the 3-number code below:" << std::endl;
 
