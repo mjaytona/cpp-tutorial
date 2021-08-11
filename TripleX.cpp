@@ -40,11 +40,12 @@ int main()
         std::cout << "The light on the door turned green..." << std::endl;
         std::cout << "The security measures for the whole lobby has been deactivated..." << std::endl;
         std::cout << "The back-door opened..." << std::endl;
+        std::cout << "You head straight to the elevator to Basement 2." << std::endl;
     }
     
     else
     {
-        std::cout << "Your tripped the alarm...RUN!" << std::endl;
+        std::cout << "Your tripped the alarm!" << std::endl;
         std::cout << "The guards caught you..." << std::endl;
         std::cout << "GAME OVER" << std::endl;
     }
