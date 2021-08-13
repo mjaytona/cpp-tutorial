@@ -24,6 +24,7 @@ int main()
     std::cout << std::endl;
     std::cout << "Enter the 3-number code below:" << std::endl;
 
+    // Player inputs
     int GuessA, GuessB, GuessC;
     
     std::cin >> GuessA;
@@ -35,6 +36,7 @@ int main()
     int GuessSum = GuessA + GuessB + GuessC;
     int GuessProduct = GuessA * GuessB * GuessC;
 
+    // if else statement for calculating whether player entered the correct answers
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
     {
         std::cout << "The light on the door turned green..." << std::endl;
