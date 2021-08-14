@@ -1,14 +1,16 @@
 #include<iostream>
 
-int main()
+void PrintIntroduction()
 {
     // Print opening messages to the terminal
-    std::cout << "You are breaking into J&A to steal Matsumoto Jun's HDD...";
-    std::cout << std::endl;
-    std::cout << "It seems to be locked behind the walls of J&A...";
-    std::cout << std::endl;
-    std::cout << "You need to enter the correct codes to get into the building undetected..." << std::endl;
-    std::cout << std::endl;
+    std::cout << "You are breaking into J&A to steal Matsumoto Jun's HDD...\n";
+    std::cout << "It seems to be locked behind the walls of J&A...\n";
+    std::cout << "You need to enter the correct codes to get into the building undetected...\n\n";
+}
+
+void PlayGame()
+{
+    PrintIntroduction();
 
     const int CodeA = 3;
     const int CodeB = 2;
@@ -18,39 +20,39 @@ int main()
     const int CodeProduct = CodeA * CodeB * CodeC;
 
     // Print sum and product to terminal
-    std::cout << "--> The terminal requires you to input 3 codes in total" << std::endl;
-    std::cout << "--> The numbers add up to " << CodeSum << std::endl;
-    std::cout << "--> And when multiplied, gives a product of " << CodeProduct << std::endl;
-    std::cout << std::endl;
-    std::cout << "Enter the 3-number code below:" << std::endl;
+    std::cout << "--> The terminal requires you to input 3 codes in total\n";
+    std::cout << "--> The numbers add up to " << CodeSum;
+    std::cout << "\n--> And when multiplied, gives a product of " << CodeProduct;
+    std::cout << "\n\nEnter the 3-number code below:\n";
 
-    // Player inputs
+    // Store player inputs
     int GuessA, GuessB, GuessC;
     
-    std::cin >> GuessA;
-    std::cin >> GuessB;
-    std::cin >> GuessC;
-    std::cout << std::endl;
-    std::cout << "You have entered: " << GuessA << GuessB << GuessC << std::endl;
+    std::cin >> GuessA >> GuessB >> GuessC;
+    std::cout << "\nYou have entered: " << GuessA << GuessB << GuessC;
 
     int GuessSum = GuessA + GuessB + GuessC;
     int GuessProduct = GuessA * GuessB * GuessC;
 
-    // if else statement for calculating whether player entered the correct answers
+    // if else statement for checking whether player entered the correct answers
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
     {
-        std::cout << "The light on the door turned green..." << std::endl;
-        std::cout << "The security measures for the whole lobby has been deactivated..." << std::endl;
-        std::cout << "The back-door opened..." << std::endl;
-        std::cout << "You head straight to the elevator to Basement 2." << std::endl;
-    }
-    
+        std::cout << "\n\nThe light on the door turned green...\n";
+        std::cout << "The security measures for the whole lobby has been deactivated...\n";
+        std::cout << "The back-door opened...\n";
+        std::cout << "You head straight to the elevator to Basement 2.\n";
+    } 
     else
     {
-        std::cout << "Your tripped the alarm!" << std::endl;
-        std::cout << "The guards caught you..." << std::endl;
-        std::cout << "GAME OVER" << std::endl;
+        std::cout << "\n\nYour tripped the alarm!\n";
+        std::cout << "The guards caught you...\n";
+        std::cout << "GAME OVER\n";
     }
+}
+
+int main()
+{
     
+    PlayGame();
     return 0;
 }
