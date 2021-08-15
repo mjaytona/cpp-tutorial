@@ -34,13 +34,14 @@ void PlayGame()
     int GuessSum = GuessA + GuessB + GuessC;
     int GuessProduct = GuessA * GuessB * GuessC;
 
-    // if else statement for checking whether player entered the correct answers
+    // Check whether player answer is right or wrong
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
     {
         std::cout << "\n\nThe light on the door turned green...\n";
         std::cout << "The security measures for the whole lobby has been deactivated...\n";
         std::cout << "The back-door opened...\n";
-        std::cout << "You head straight to the elevator to Basement 2.\n";
+        std::cout << "You head straight to the elevator to Basement 2 and found Jun'ss HDD.\n";
+        std::cout << "YOU WIN!";
     } 
     else
     {
