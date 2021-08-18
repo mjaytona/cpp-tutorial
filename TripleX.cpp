@@ -6,7 +6,7 @@ void PrintIntroduction(int Difficulty)
     std::cout << "\nYou are breaking into J&A to steal Matsumoto Jun's HDD...\n";
     std::cout << "It seems to be locked behind the walls of the J&A building...\n";
     std::cout << "You need to enter the correct codes to the level " << Difficulty;
-    std::cout << " security terminal to get into the building undetected...\n\n";
+    std::cout << " security terminal on the door to get into the building undetected...\n\n";
 }
 
 bool PlayGame(int Difficulty)
@@ -41,7 +41,7 @@ bool PlayGame(int Difficulty)
         std::cout << "\n\nThe light on the door turned green...\n";
         std::cout << "The security measures for the whole lobby has been deactivated...\n";
         std::cout << "The back-door opened...\n";
-        std::cout << "You head straight to the elevator to Basement 2 and found Jun'ss HDD.\n";
+        std::cout << "You head straight to the elevator to Basement 2 and found Jun's HDD on the table.\n";
         std::cout << "YOU WIN!\n";
         return true;
     } 
