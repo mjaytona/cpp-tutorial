@@ -11,7 +11,7 @@ void PrintIntroduction(int Difficulty)
 
 bool PlayGame(int Difficulty)
 {
-    PrintIntroduction(Difficulty);
+    PrintIntroduction(Difficulty); // PlayDifficulty goes into Difficulty and prints thru PrintIntroduction in PlayGame
 
     const int CodeA = 3;
     const int CodeB = 2;
