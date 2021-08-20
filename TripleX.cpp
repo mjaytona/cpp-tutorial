@@ -1,4 +1,5 @@
 #include<iostream>
+#include<ctime>
 
 void PrintIntroduction(int Difficulty)
 {
@@ -6,16 +7,16 @@ void PrintIntroduction(int Difficulty)
     std::cout << "\nYou are breaking into J&A to steal Matsumoto Jun's HDD...\n";
     std::cout << "It seems to be locked behind the walls of the J&A building...\n";
     std::cout << "You need to enter the correct codes to the level " << Difficulty;
-    std::cout << " security terminal on the door to get into the building undetected...\n\n";
+    std::cout << " security terminal on the door to continue...\n\n";
 }
 
 bool PlayGame(int Difficulty)
 {
     PrintIntroduction(Difficulty); // PlayDifficulty goes into Difficulty and prints thru PrintIntroduction in PlayGame
 
-    const int CodeA = 3;
-    const int CodeB = 2;
-    const int CodeC = 5;
+    const int CodeA = rand() % Difficulty + Difficulty;
+    const int CodeB = rand() % Difficulty + Difficulty;
+    const int CodeC = rand() % Difficulty + Difficulty;
 
     const int CodeSum = CodeA + CodeB + CodeC;
     const int CodeProduct = CodeA * CodeB * CodeC;
@@ -38,26 +39,25 @@ bool PlayGame(int Difficulty)
     // Check whether player answer is right or wrong
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
     {
-        std::cout << "\n\nThe light on the door turned green...\n";
-        std::cout << "The security measures for the whole lobby has been deactivated...\n";
-        std::cout << "The back-door opened...\n";
-        std::cout << "You head straight to the elevator to Basement 2 and found Jun's HDD on the table.\n";
-        std::cout << "YOU WIN!\n";
+        std::cout << "\n\n*** The light on the door turned green... KEEP GOING! ***\n";
+
         return true;
     } 
     else
     {
-        std::cout << "\n\nYour tripped the alarm!\n";
-        std::cout << "The guards caught you...\n";
-        std::cout << "GAME OVER\n";
+        std::cout << "\n\n*** You entered the wrong code and almost tripped the alarm! Careful now! Try Again! ***\n";
+
         return false;
     }
 }
 
 int main()
 {
+    srand(time(NULL));
     int LevelDifficulty = 1;
-    while (true)
+    int const MaxLevel = 5;
+
+    while (LevelDifficulty <= MaxLevel) // Loop game until all levels are completed
     {
         bool bLevelComplete = PlayGame(LevelDifficulty);
         std::cin.clear();   // Clears any errors
@@ -69,6 +69,8 @@ int main()
         }
         
     }
+
+    std::cout << "*** CONGRATULATIONS! You escaped with Jun's HDD. YOU WIN! ***\n";
 
     return 0;
 }
